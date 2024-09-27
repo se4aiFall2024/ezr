@@ -1,0 +1,78 @@
+
+Processing High-Dimensional dataset: /Users/yukino/Documents/CSC591-SE4AI/data/optimize/config/SS-S.csv
+Number of independent variables: 6
+Running commissioning tests...
+Test passed: chebyshevs().rows[0] returns the top item.
+Test passed: shuffle() changes the order of the data.
+
+Running experiments for N = 20
+Test passed: exploit/b=False ran 20 times as expected.
+Test passed: exploit/b=True ran 20 times as expected.
+Test passed: explore/b=False ran 20 times as expected.
+Test passed: explore/b=True ran 20 times as expected.
+Test passed: Dumb method ran 20 times as expected.
+
+Length checks for N=20:
+  1/80 smart lists did not have the correct length 20.
+  Possible reasons: implementation issues or incorrect handling of 'the.Last'.
+  All 20 dumb lists have the correct length 20.
+
+Running experiments for N = 30
+Test passed: exploit/b=False ran 20 times as expected.
+Test passed: exploit/b=True ran 20 times as expected.
+Test passed: explore/b=False ran 20 times as expected.
+Test passed: explore/b=True ran 20 times as expected.
+Test passed: Dumb method ran 20 times as expected.
+
+Length checks for N=30:
+  All 80 smart lists have the correct length 30.
+  All 20 dumb lists have the correct length 30.
+
+Running experiments for N = 40
+Test passed: exploit/b=False ran 20 times as expected.
+Test passed: exploit/b=True ran 20 times as expected.
+Test passed: explore/b=False ran 20 times as expected.
+Test passed: explore/b=True ran 20 times as expected.
+Test passed: Dumb method ran 20 times as expected.
+
+Length checks for N=40:
+  All 80 smart lists have the correct length 40.
+  All 20 dumb lists have the correct length 40.
+
+Running experiments for N = 50
+Test passed: exploit/b=False ran 20 times as expected.
+Test passed: exploit/b=True ran 20 times as expected.
+Test passed: explore/b=False ran 20 times as expected.
+Test passed: explore/b=True ran 20 times as expected.
+Test passed: Dumb method ran 20 times as expected.
+
+Length checks for N=50:
+  All 80 smart lists have the correct length 50.
+  All 20 dumb lists have the correct length 50.
+
+Results for dataset: /Users/yukino/Documents/CSC591-SE4AI/data/optimize/config/SS-S.csv
+#
+ 0,              dumb,40,  0.01,  0.01, *                   |                   
+ 0,    exploit/b=True,30,  0.01,  0.00, *                   |                   
+ 0,    explore/b=True,30,  0.01,  0.02, *                   |                   
+ 0,    exploit/b=True,40,  0.01,  0.02, *                   |                   
+ 0,    exploit/b=True,50,  0.01,  0.02, *-                  |                   
+ 0,              dumb,30,  0.01,  0.02, *                   |                   
+ 0,   exploit/b=False,30,  0.01,  0.04, *--                 |                   
+ 0,              dumb,50,  0.01,  0.02, *                   |                   
+ 0,    explore/b=True,50,  0.02,  0.02, *                   |                   
+ 0,   exploit/b=False,50,  0.02,  0.02, *                   |                   
+ 0,    explore/b=True,40,  0.02,  0.02, *                   |                   
+ 0,   explore/b=False,50,  0.02,  0.04, *--                 |                   
+ 0,    exploit/b=True,20,  0.02,  0.02, *--                 |                   
+ 0,   exploit/b=False,40,  0.03,  0.03, *--                 |                   
+ 0,   explore/b=False,30,  0.03,  0.02,  *                  |                   
+ 0,   explore/b=False,20,  0.03,  0.02,  *                  |                   
+ 0,              dumb,20,  0.03,  0.03,  *                  |                   
+ 0,   explore/b=False,40,  0.03,  0.03,  *--                |                   
+#
+ 1,   exploit/b=False,20,  0.04,  0.02,  *-                 |                   
+ 1,    explore/b=True,20,  0.05,  0.02, -*                  |                   
+#
+ 2,            asIs,3840,  0.18,  0.37,   ---- *            | -----------       
+#

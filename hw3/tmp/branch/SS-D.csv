@@ -1,0 +1,81 @@
+
+Processing Low-Dimensional dataset: /Users/yukino/Documents/CSC591-SE4AI/data/optimize/config/SS-D.csv
+Number of independent variables: 3
+Running commissioning tests...
+Test passed: chebyshevs().rows[0] returns the top item.
+Test passed: shuffle() changes the order of the data.
+
+Running experiments for N = 20
+Test passed: exploit/b=False ran 20 times as expected.
+Test passed: exploit/b=True ran 20 times as expected.
+Test passed: explore/b=False ran 20 times as expected.
+Test passed: explore/b=True ran 20 times as expected.
+Test passed: Dumb method ran 20 times as expected.
+
+Length checks for N=20:
+  All 80 smart lists have the correct length 20.
+  All 20 dumb lists have the correct length 20.
+
+Running experiments for N = 30
+Test passed: exploit/b=False ran 20 times as expected.
+Test passed: exploit/b=True ran 20 times as expected.
+Test passed: explore/b=False ran 20 times as expected.
+Test passed: explore/b=True ran 20 times as expected.
+Test passed: Dumb method ran 20 times as expected.
+
+Length checks for N=30:
+  All 80 smart lists have the correct length 30.
+  All 20 dumb lists have the correct length 30.
+
+Running experiments for N = 40
+Test passed: exploit/b=False ran 20 times as expected.
+Test passed: exploit/b=True ran 20 times as expected.
+Test passed: explore/b=False ran 20 times as expected.
+Test passed: explore/b=True ran 20 times as expected.
+Test passed: Dumb method ran 20 times as expected.
+
+Length checks for N=40:
+  All 80 smart lists have the correct length 40.
+  All 20 dumb lists have the correct length 40.
+
+Running experiments for N = 50
+Test passed: exploit/b=False ran 20 times as expected.
+Test passed: exploit/b=True ran 20 times as expected.
+Test passed: explore/b=False ran 20 times as expected.
+Test passed: explore/b=True ran 20 times as expected.
+Test passed: Dumb method ran 20 times as expected.
+
+Length checks for N=50:
+  All 80 smart lists have the correct length 50.
+  All 20 dumb lists have the correct length 50.
+
+Results for dataset: /Users/yukino/Documents/CSC591-SE4AI/data/optimize/config/SS-D.csv
+#
+ 0,    exploit/b=True,50,  0.39,  0.14, *       ---         |                   
+#
+ 1,    explore/b=True,50,  0.45,  0.10,     * --------      |                   
+#
+ 2,              dumb,30,  0.49,  0.07, ----- *  --         |                   
+ 2,   exploit/b=False,50,  0.52,  0.07, ------  *  ---      |                   
+ 2,              dumb,50,  0.52,  0.03, ------  *--         |                   
+ 2,              dumb,40,  0.53,  0.05, ------   *-         |                   
+ 2,    exploit/b=True,30,  0.53,  0.17,          * ----     |                   
+ 2,    exploit/b=True,40,  0.53,  0.17,          * -----    |                   
+ 2,    explore/b=True,40,  0.53,  0.09, -----    * ---      |                   
+ 2,   explore/b=False,20,  0.54,  0.12,       --- *      ---|-                  
+ 2,   explore/b=False,30,  0.54,  0.15,      -    *     ----|                   
+#
+ 3,    exploit/b=True,20,  0.56,  0.08,     ----   *  -     |                   
+ 3,    explore/b=True,30,  0.56,  0.18,            *----    |                   
+ 3,   exploit/b=False,40,  0.56,  0.05, --------   *---     |                   
+ 3,   explore/b=False,50,  0.56,  0.12, --------   *    -   |                   
+ 3,              dumb,20,  0.57,  0.06,      ----  * ---    |                   
+ 3,    explore/b=True,20,  0.57,  0.05,      ------ * ------|-                  
+ 3,   exploit/b=False,30,  0.57,  0.06, --------    *----   |                   
+#
+ 4,   explore/b=False,40,  0.59,  0.10,          -   *  --- |                   
+#
+ 5,   exploit/b=False,20,  0.60,  0.11,     ----      *-    |                   
+#
+ 6,             asIs,196,  0.74,  0.11,              ------ |  *   ------------ 
+#
