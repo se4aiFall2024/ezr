@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # 设置路径
-DATA_DIR="/Users/yukino/Documents/CSC591-SE4AI/data/optimize/config"
-OUTPUT_DIR="/Users/yukino/Documents/CSC591-SE4AI/ezr/hw3/tmp/branch"
-EXPERIMENT_PY="/Users/yukino/Documents/CSC591-SE4AI/ezr/hw3/experiment.py"
+DATA_DIR="../data/optimize/config"
+OUTPUT_DIR="./tmp/branch"
+EXPERIMENT_PY="./experiment.py"
 
 # 确保输出目录存在
 mkdir -p "$OUTPUT_DIR"
