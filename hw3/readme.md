@@ -1,8 +1,14 @@
 ## Results
-### Installation.
-No extra installation needed. You can find answer for experiment1 in experiment.py. We modified the branch.sh to fit our specific use case or scenario, renaming it as run_experiments.sh. Besides, rq.sh is at /hw3/tmp/branch/rq.sh. Our output files of experiment 2 are under /hw3/tmp/branch.
-### test cases
-To illustrate the test cases, I will use the results of running /data/optimize/config/SS-B.csv as an example, which can be executed using the command:
+### Installation
+No extra installation needed. To run the code make sure you're on the 24Aug14 branch and in the hw3 folder. Our experiment code is in experiment.py. For part 2 of running it over many data sets, we modified the branch.sh to fit our specific use case/scenario, renaming it as run_experiments.sh. Finally, rq.sh is at tmp/branch/rq.sh. 
+
+To run the experiment on the datasets, run run_experiments.sh. We programmed on windows devices, so you may have to run `dos2unix run_experiments.sh` on other systems before you can run the script (can be done with `bash run_experiments.sh`). After run_experiments has finished running, you can see the results with rq.sh (can be done by `cd tmp/branch` followed by `bash rq.sh` (you may have to run dos2unix on this file as well if you're not on Windows)). You can also see our output files from when we ran it (see next section).
+
+### Output Files
+Our output files of experiment 2 are under /hw3/tmp/branch. See results_summary.txt for a summary (the output of RQ.sh).
+
+### Test cases
+To illustrate the test cases, we'll use the results of running /data/optimize/config/SS-B.csv as an example, which can be executed using the command:
 python experiment.py /workspaces/ezr/data/optimize/config/SS-B.csv.
 
 Below is a portion of the output showcasing the corresponding test cases:
@@ -66,6 +72,7 @@ As demonstrated, the test cases address the four required checks:
     3. Experiment runs 20 times: Confirms that the experiment is executed 20 times for statistical significance.
 
     4. d.shuffle(): Verifies that the shuffle() function properly randomizes the order of the data.
+
 ### Key Methods:
 - **exploit**: Optimizes by exploiting known best results.
 - **explore**: Tries new configurations to explore other possible improvements.
@@ -91,13 +98,16 @@ As demonstrated, the test cases address the four required checks:
 The results are presented in three main sections: RANK, EVALS, and DELTAS.
 
 1. RANK:
-- Shows the percentage of times each method achieved a particular rank across all datasets.
+- Shows the percentage of times each method achieved a particular rank across all datasets. Methods in the same rank performed statistically the same. Lower ranks indicate better performance, with rank 0 being the best.
 - exploi/b=True performed best, achieving rank 0 in 94% of cases.
+- explore/b=True performed the second best, indicating that simulating a warm start for initialization improve performance for both exploit and explore methods
 - Random guessing (dumb) achieved rank 0 in 63% of cases, lower than most active learning methods.
 
 2. EVALS:
 - Displays the average number of evaluations (with standard deviation) for each method at each rank.
-- Most methods (except asIs) used 25-29 evaluations on average.
+- Ignoring asIs, we see all the methods used about 25-29 evaluations on average in rank 0
+  - We see the number of evaluations increases as rank increases, backing up the merit of doing more with less
+  - Still, the average number of evaluations is only 50 at its worse (exploi/b=False at rank 3, which only happened 3% of the time)
 - Random guessing (dumb) used a similar number of evaluations as active learning methods.
 
 3. DELTAS:
