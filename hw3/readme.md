@@ -1,4 +1,71 @@
 ## Results
+### Installation.
+No extra installation needed. You can find answer for experiment1 in experiment.py. We modified the branch.sh to fit our specific use case or scenario, renaming it as run_experiments.sh. rq.sh is in /hw3/tmp/branch/rq.sh. Our output files of experiment 2 are under /hw3/tmp/branch.
+### test cases
+To illustrate the test cases, I will use the results of running /data/optimize/config/SS-B.csv as an example, which can be executed using the command:
+python experiment.py /workspaces/ezr/data/optimize/config/SS-B.csv.
+
+Below is a portion of the output showcasing the corresponding test cases:
+```
+Processing Low-Dimensional dataset: /workspaces/ezr/data/optimize/config/SS-B.csv
+Number of independent variables: 3
+Running commissioning tests...
+Test passed: chebyshevs().rows[0] returns the top item.
+Test passed: shuffle() changes the order of the data.
+
+Running experiments for N = 20
+Test passed: exploit/b=False ran 20 times as expected.
+Test passed: exploit/b=True ran 20 times as expected.
+Test passed: explore/b=False ran 20 times as expected.
+Test passed: explore/b=True ran 20 times as expected.
+Test passed: Dumb method ran 20 times as expected.
+
+Length checks for N=20:
+  All 80 smart lists have the correct length of 20.
+  All 20 dumb lists have the correct length of 20.
+
+Running experiments for N = 30
+Test passed: exploit/b=False ran 20 times as expected.
+Test passed: exploit/b=True ran 20 times as expected.
+Test passed: explore/b=False ran 20 times as expected.
+Test passed: explore/b=True ran 20 times as expected.
+Test passed: Dumb method ran 20 times as expected.
+
+Length checks for N=30:
+  All 80 smart lists have the correct length of 30.
+  All 20 dumb lists have the correct length of 30.
+
+Running experiments for N = 40
+Test passed: exploit/b=False ran 20 times as expected.
+Test passed: exploit/b=True ran 20 times as expected.
+Test passed: explore/b=False ran 20 times as expected.
+Test passed: explore/b=True ran 20 times as expected.
+Test passed: Dumb method ran 20 times as expected.
+
+Length checks for N=40:
+  All 80 smart lists have the correct length of 40.
+  All 20 dumb lists have the correct length of 40.
+
+Running experiments for N = 50
+Test passed: exploit/b=False ran 20 times as expected.
+Test passed: exploit/b=True ran 20 times as expected.
+Test passed: explore/b=False ran 20 times as expected.
+Test passed: explore/b=True ran 20 times as expected.
+Test passed: Dumb method ran 20 times as expected.
+
+Length checks for N=50:
+  All 80 smart lists have the correct length of 50.
+  All 20 dumb lists have the correct length of 50.
+```
+As demonstrated, the test cases address the four required checks:
+
+    1. chebyshevs().rows[0]: Verifies that the function returns the top sorted item.
+
+    2. smart and dumb list lengths: Ensures that both lists have the correct length, depending on the value of N.
+
+    3. Experiment runs 20 times: Confirms that the experiment is executed 20 times for statistical significance.
+
+    4. d.shuffle(): Verifies that the shuffle() function properly randomizes the order of the data.
 ### Key Methods:
 - **exploit**: Optimizes by exploiting known best results.
 - **explore**: Tries new configurations to explore other possible improvements.
