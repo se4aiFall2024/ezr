@@ -1,6 +1,6 @@
 ## Results
 ### Installation.
-No extra installation needed. You can find answer for experiment1 in experiment.py. We modified the branch.sh to fit our specific use case or scenario, renaming it as run_experiments.sh.Besides, rq.sh is in /hw3/tmp/branch/rq.sh. Our output files of experiment 2 are under /hw3/tmp/branch.
+No extra installation needed. You can find answer for experiment1 in experiment.py. We modified the branch.sh to fit our specific use case or scenario, renaming it as run_experiments.sh. Besides, rq.sh is in /hw3/tmp/branch/rq.sh. Our output files of experiment 2 are under /hw3/tmp/branch.
 ### test cases
 To illustrate the test cases, I will use the results of running /data/optimize/config/SS-B.csv as an example, which can be executed using the command:
 python experiment.py /workspaces/ezr/data/optimize/config/SS-B.csv.
